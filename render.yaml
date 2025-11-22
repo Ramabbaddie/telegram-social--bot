@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: social-downloader
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python social.py
+    autoDeploy: true
+
+    envVars:
+      YOUR_TELEGRAM_BOT_TOKEN: "8276166876:AAF-S3UucqJfXvjFPrxrL7bgUOIOsIUY5Uo"
+      ADMIN_IDS: "7292842413"
+      # YOUR_API_BASE_URL is already hardcoded in script, but you can override here if you want
+      # YOUR_API_BASE_URL: "https://socialdown.itz-ashlynn.workers.dev"
